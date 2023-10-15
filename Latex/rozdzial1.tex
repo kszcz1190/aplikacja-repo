@@ -1,0 +1,158 @@
+\newpage
+\section{Ogólne określenie wymagań}		%1
+%Określenie celu pracy, co chcemy uzyskać, jakie przewidujemy wyniki
+
+Aplikacja sportowa ma na celu umożliwienie użytkownikowi śledzenia i zarządzania swoimi aktywnościami fizycznymi w prosty i skuteczny sposób, zapewniając narzędzia do tworzenia planów treningowych, monitorowania postępów i rejestrowania tras treningów. To narzędzie ma pomóc użytkownikom osiągnąć swoje cele fitness.
+
+\begin{itemize}
+    \item Wymagania od perspektywy osoby zamawiającej aplikację:
+    \begin{enumerate}
+        \item Aplikacja sportowa ma służyć monitorowaniu aktywności fizycznych i pomagać w osiągnięciu określonych celów fitness.
+        
+        \item Aplikacja powinna umożliwiać użytkownikowi ustalenie swoich podstawowych informacji, takich jak płeć, wiek, aktualna aktywność fizyczna oraz docelowa aktywność.
+
+        \item Na stronie głównej aplikacji powinny być dostępne ikonki reprezentujące różne dziedziny sportu (np. ikonka paletki do tenisa). Użytkownik może wybierać spośród nich, aby zarejestrować swoją aktywność. 
+        
+       \item Po wybraniu konkretnego sportu, użytkownik może określić czas trwania treningu oraz jego intensywność.
+
+       \item Aplikacja powinna także oferować opcję tworzenia planów treningowych, szczególnie dla aktywności w siłowni. Użytkownik może określić dni treningowe, ćwiczenia, ilość serii, powtórzeń, obciążenia i poziom trudności.
+
+       \item Baza danych aplikacji powinna zawierać szeroki zakres ćwiczeń, aby użytkownik mógł łatwo znaleźć i dodać ćwiczenia do swojego planu treningowego.
+
+       \item Aplikacja powinna monitorować postępy użytkownika i dostarczać informacji zwrotnej na temat poprawy w wykonywanych ćwiczeniach lub aktywnościach fizycznych.
+
+       \item Dla aktywności, takiej jak jogging, aplikacja powinna rejestrować trasę treningu i przechowywać ją, aby użytkownik mógł do niej powrócić w przyszłości.
+
+       \item W aplikacji powinno istnieć narzędzie "dziennik", które automatycznie zapisuje nazwę treningu.
+
+       \item Moduł "Trening" powinien wyświetlać aktualnie wykonywane ćwiczenia oraz czas trwania treningu.
+
+    \end{enumerate}
+    \newpage
+    \item Wymagania od perspektywy użytkownika:
+    \begin{enumerate}
+        \item Po uruchomieniu aplikacji użytkownik powinien móc zaktualizować swoje podstawowe informacje, takie jak płeć, wiek, aktualna aktywność fizyczna i cel treningowy.
+
+        \item Na stronie głównej użytkownik widzi różne ikonki reprezentujące dziedziny sportu i może wybrać jedną z nich.
+
+        \item Po wyborze sportu, użytkownik może wprowadzić czas trwania treningu i ocenić jego intensywność.
+
+        \item W przypadku treningu na siłowni, użytkownik może tworzyć plany treningowe na określone dni, określać ćwiczenia, ilość serii, powtórzeń, obciążenia i poziom trudności.
+
+        \item Użytkownik ma dostęp do bazy danych ćwiczeń i może łatwo dodawać je do swojego planu treningowego.
+
+        \item Aplikacja wyświetla użytkownikowi postępy w wykonywanych aktywnościach i ćwiczeniach, pokazując, czy osiągnął cele.
+
+        \item Dla aktywności, takiej jak jogging, użytkownik może prześledzić trasę treningu i przejrzeć wcześniejsze treningi.
+
+        \item W "dzienniku" użytkownik ma dostęp do historii swoich treningów, widząc ich nazwę i datę.
+
+        \item Moduł "Trening" pokazuje aktualnie wykonywane ćwiczenia, czas trwania treningu oraz zaplanowane aktywności, aby użytkownik mógł skupić się na treningu.
+    \end{enumerate}
+\end{itemize}
+ 
+
+\subsection{Przykład}  %1.1       
+
+\hspace{0.60cm}Tak zaczynamy pisanie pierwszego akapitu. Jeśli chcemy napisać przypis do bibliografii wykonujemy to w~ten sposób\footnote{Przykład odnośnika do książki\cite{legierski}.}.
+
+%rysunek
+	\begin{figure}[!htb]
+	\begin{center}
+		\includegraphics[width=8cm]{rys/ans.png}
+		\caption{Logo}
+		\label{rys:rysunek001}
+	\end{center}
+\end{figure}
+
+Tutaj może coś być wpisane. \\Tutaj może coś być wpisane\footnote{Przykład odnośnika do strony www\cite{www1}.}. 
+Rysunek \ref{rys:rysunek001} (s. \pageref{rys:rysunek001}) pokazuje przykładową ilustrację.
+
+%tabelka
+\begin{tabela}
+	%uwaga: w nawiasach [] nie może być odnośnika do literatury, jeżeli w dokumencie jest spis rysunków na początku, a spis literatury jest w kolejności cytowania (zmienia to numeracji)
+	{Tabelka przykładowa}	%opis w spisie tabel
+	{Tabelka przykładowa}	%opis przy tabeli
+	{
+		\begin{tabular}{|c|c|} \hline
+			$U_n$ & $I_{zw}$ \\ \hline
+			$kV$  & $\%$      \\ \hline
+			7.2 & 100 \\ \hline
+		\end{tabular}
+	}
+	\label{tab:tablica001}
+\end{tabela}
+
+% Kod
+
+Listing kodu
+
+\begin{lstlisting}[caption=Przykładowy kod 001, label={lst:listing-cpp}, language=C++]
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+/*
+liczby pseldolosowe
+*/
+
+int main(int argc, char** argv) {
+	
+	int tab[10][10];
+	
+	for(int i=0;i<10;i++)
+	for(int j=0;j<10;j++)
+	tab[i][j]=0;
+	
+	srand(time(NULL));		//generowanie z czasu
+	int min=3;
+	int max=7;
+	for(int i=0;i<10;i++)
+	for(int j=0;j<10;j++)		
+	tab[i][j]=(rand()%(max-min+1))+min;	
+	
+	for(int i=0;i<10;i++)
+	{
+		for(int j=0;j<10;j++)
+		cout<<tab[i][j]<<" ";	
+		cout<<endl;
+	}
+	
+	return 0;
+}
+\end{lstlisting}
+
+Tutaj może coś być wpisane. Tutaj może coś być wpisane. Tutaj może coś być wpisane. Tabela \ref{tab:tablica001} (s. \pageref{tab:tablica001}) pokazuje sposoby użycia trybu matematycznego.
+
+Kod \ref{lst:listing-cpp} (s. \pageref{lst:listing-cpp}) przedstawia sposób generowania liczb pseudolosowych. Kod \ref{lst:listing-cpp2} (s. \pageref{lst:listing-cpp2}) przedstawia generowanie pliku HTML.
+
+Alternatywna metoda wklejenia kodu:
+
+\lstinputlisting[caption=Przykładowy kod 002, label={lst:listing-cpp2}, language=C++]{kod/main.cpp}
+
+
+\subsection{Instalacja}  %1.2
+
+\hspace{0.60cm}Poniżej są opisane kroki potrzebne do instalacji \LaTeX 'a oraz do używania tego szablonu.
+
+ Na początku instalujemy \TeX{}Live\footnote{Instalka na stronie  https://www.tug.org/texlive/acquire-netinstall.html\cite{www2}.}. Ściągamy plik instalacyjny, zajmuje około 25MB. Podczas instalacji można wybrać do zainstalowania różne kolekcje pakietów. Jeśli nie ma problemów z miejscem na dysku to można zainstalować wszystkie, wtedy nie będzie problemu z brakującymi pakietami i błędami. Po wybraniu kolekcji brakujące pliki są pobierane z internetu. Pełna instalacja programu zajmuje około 8GB. Najlepiej zostawić instalację na noc, ponieważ proces zabiera sporo czasu. Warto ustawić komputer tak, aby się nie wyłączył lub nie uśpił. Warto także przed instalacją zablokować antywirusa, ponieważ może blokować niektóre z komponentów.
+ 
+Następnie instalujemy \TeX{}studio\footnote{Plik instalacyjny na stronie  https://www.texstudio.org\cite{www3}.}. Ściągamy plik instalacyjny zajmujący około 120MB. Instalacja przebiega standardowo.
+
+ %rysunek
+\begin{figure}[!hbt]
+	\begin{center}
+		\includegraphics[width=\linewidth]{rys/ustawienie.png}
+		\caption{Ustawienie TeXstudio}
+		\label{rys:ustawienia}
+	\end{center}
+\end{figure}
+
+Następnym krokiem jest ustawienie w \TeX{}Studio kolejności budowania projektu. Należy wybrać zakładkę: ,,Opcje/Konfiguruj \TeX{}studio...''. W otwartym oknie przechodzimy na zakładkę ,,Zbuduj''. Na rysunku \ref{rys:ustawienia} (s. \pageref{rys:ustawienia}) pokazany jest zrzut ekranu z konfiguracją. W linijce ,,Zbuduj i pokaż'' klikamy ikonę klucza, żeby przejść do konfiguracji polecenia. W otwartym oknie ustawić kolejność tak jak pokazano na rysunku.
+
+ 
+ 
+ 
+ 
+ 
