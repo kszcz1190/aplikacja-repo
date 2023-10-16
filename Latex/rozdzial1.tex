@@ -51,99 +51,18 @@ Aplikacja sportowa ma na celu umożliwienie użytkownikowi śledzenia i zarządz
     \end{enumerate}
 \end{itemize}
  
-
-\subsection{Przykład}  %1.1       
-
-\hspace{0.60cm}Tak zaczynamy pisanie pierwszego akapitu. Jeśli chcemy napisać przypis do bibliografii wykonujemy to w~ten sposób\footnote{Przykład odnośnika do książki\cite{legierski}.}.
-
-%rysunek
-	\begin{figure}[!htb]
-	\begin{center}
-		\includegraphics[width=8cm]{rys/ans.png}
-		\caption{Logo}
-		\label{rys:rysunek001}
-	\end{center}
+\newpage
+\subsection{Szkic aplikacji}  %1.1  
+\begin{figure}[H]
+\centering
+    \includegraphics[width=130px]{rys/image0.jpeg}
+    \includegraphics[width=125px]{rys/image1.jpeg} \\
+    \includegraphics[width=130px]{rys/image2.jpeg}
+    \includegraphics[width=125px]{rys/image3.jpeg}
+    \caption{Szkic aplikacji}
+    \label{fig:enter-label}
 \end{figure}
 
-Tutaj może coś być wpisane. \\Tutaj może coś być wpisane\footnote{Przykład odnośnika do strony www\cite{www1}.}. 
-Rysunek \ref{rys:rysunek001} (s. \pageref{rys:rysunek001}) pokazuje przykładową ilustrację.
-
-%tabelka
-\begin{tabela}
-	%uwaga: w nawiasach [] nie może być odnośnika do literatury, jeżeli w dokumencie jest spis rysunków na początku, a spis literatury jest w kolejności cytowania (zmienia to numeracji)
-	{Tabelka przykładowa}	%opis w spisie tabel
-	{Tabelka przykładowa}	%opis przy tabeli
-	{
-		\begin{tabular}{|c|c|} \hline
-			$U_n$ & $I_{zw}$ \\ \hline
-			$kV$  & $\%$      \\ \hline
-			7.2 & 100 \\ \hline
-		\end{tabular}
-	}
-	\label{tab:tablica001}
-\end{tabela}
-
-% Kod
-
-Listing kodu
-
-\begin{lstlisting}[caption=Przykładowy kod 001, label={lst:listing-cpp}, language=C++]
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
-using namespace std;
-
-/*
-liczby pseldolosowe
-*/
-
-int main(int argc, char** argv) {
-	
-	int tab[10][10];
-	
-	for(int i=0;i<10;i++)
-	for(int j=0;j<10;j++)
-	tab[i][j]=0;
-	
-	srand(time(NULL));		//generowanie z czasu
-	int min=3;
-	int max=7;
-	for(int i=0;i<10;i++)
-	for(int j=0;j<10;j++)		
-	tab[i][j]=(rand()%(max-min+1))+min;	
-	
-	for(int i=0;i<10;i++)
-	{
-		for(int j=0;j<10;j++)
-		cout<<tab[i][j]<<" ";	
-		cout<<endl;
-	}
-	
-	return 0;
-}
-\end{lstlisting}
-
-Tutaj może coś być wpisane. Tutaj może coś być wpisane. Tutaj może coś być wpisane. Tabela \ref{tab:tablica001} (s. \pageref{tab:tablica001}) pokazuje sposoby użycia trybu matematycznego.
-
-Kod \ref{lst:listing-cpp} (s. \pageref{lst:listing-cpp}) przedstawia sposób generowania liczb pseudolosowych. Kod \ref{lst:listing-cpp2} (s. \pageref{lst:listing-cpp2}) przedstawia generowanie pliku HTML.
-
-Alternatywna metoda wklejenia kodu:
-
-\lstinputlisting[caption=Przykładowy kod 002, label={lst:listing-cpp2}, language=C++]{kod/main.cpp}
-
-\newpage
-\subsection{Technologia}  %1.2
-
-Do tworzenia naszej aplikacji sportowej wybraliśmy Xamarin.
-
-Jest to narzędzie i platforma umożliwiająca tworzenie aplikacji mobilnych na różne platformy, takie jak Android i iOS.Dzięki temu oszczędzamy czas i zasoby, unikając konieczności pisanie dwóch osobnych aplikacji. Xamarin korzysta z języka programowania C\#, który jest silnie typowanym językiem programowania ogólnego przeznaczenia.
-
-C\# jest używany do tworzenia logiki biznesowej i interfejsu użytkownika w Xamarin.
-Jednym z głównych atutów Xamarin jest możliwość dzielenia wspólnego kodu źródłowego między różnymi platformami, co pozwala na efektywną pracę przy jednoczesnym tworzeniu aplikacji na Androida i iOS.
-
-Do tworzenia aplikacji można używać popularnych zintegrowanych środowisk programistycznych (IDE), takich jak Visual Studio (z dostępem do narzędzi Xamarin) lub Xamarin Studio.
-
-Oferuje dostęp do szerokiej gamy bibliotek i narzędzi, które ułatwiają tworzenie aplikacji mobilnych, w tym interfejsów użytkownika, dostępu do urządzeń i innych funkcji.
  
  
  
